@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: "heebo";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.active{
+  background-color: #9F77EB !important;
+  color: white !important;
+}
