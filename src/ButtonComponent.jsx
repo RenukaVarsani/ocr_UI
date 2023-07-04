@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { experimentalStyled as styled } from "@mui/material/styles";
 import { FileText } from "react-feather";
 import Grid from "@mui/material/Unstable_Grid2";
+import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -27,7 +28,7 @@ const ResizableIcon = styled(FileText)`
 `;
 
 
-const ButtonComponent = ({isActive,buttonId , name }) => {
+const ButtonComponent = ({ isActive, buttonId, name }) => {
   const [selectedButtons, setSelectedButtons] = useState([]);
 
   const handleButtonClick = (id) => {
@@ -41,39 +42,51 @@ const ButtonComponent = ({isActive,buttonId , name }) => {
   };
 
   return (
-    <>
-       <ThemeProvider theme={theme}>
-      <Button
-        startIcon={<ResizableIcon />}
-        size="medium"
-        endIcon={selectedButtons.includes(buttonId) ?<CheckCircleIcon sx={{position:"absolute", height:"20px", width:"20px", bottom:"42%", right:7 , translate:"translateY(1px)"}}/>:null}
-        onClick={() => handleButtonClick(buttonId)}
-        sx={{
-          backgroundColor:selectedButtons.includes(buttonId) ? "#9F77EB" : "#D3D3D3",
-          fontSize: {xl:"15px", lg:"13px" , md:"11px" , sm:"9px"}, 
-          fontFamily:"Heebo",
-          borderRadius:"5px",          
-          fontWeight: "500 !important" , 
-          color: selectedButtons.includes(buttonId) ? "white": "black",
-          height: "63px",
-          width:"221px",
-          textTransform: "none",
-          padding: "4px 20px",
-          justifyContent: "start",
-          position:"relative",
-          ml: 1,
+    <> 
+      <ThemeProvider theme={theme}>
+     
+        <Button
+       fullWidth
+       variant="contained"
+          startIcon={<ResizableIcon />}
+          size="medium"
+          endIcon={selectedButtons.includes(buttonId) ? <CheckCircleIcon 
+            sx={{ 
+              position: "absolute",
+               height: "20px",
+                width: "20px", 
+                bottom: { xl: "60px", lg: "24px", md  : "41px", sm: "25px" },
+                right: 7, 
+               // translate: "translateY(1px)"
+               }} /> : null}
+          onClick={() => handleButtonClick(buttonId)}
+          sx={{
+            backgroundColor: selectedButtons.includes(buttonId) ? "#9F77EB" : "#D3D3D3",
+            fontSize: { xl: "15px", lg: "13px", md  : "12px", sm: "12px" },
+            fontFamily: "Heebo",
+            borderRadius: "5px",
+            letterSpacing:"0px",
+            fontWeight: "500 !important",
+            color: selectedButtons.includes(buttonId) ? "white" : "black",
+            textTransform: "none",
+            padding: "4px 20px",
+            justifyContent: "start",
+            height: "7.5vh",
+            position: "relative",
+            ml: 1,
             ":hover": {
               bgcolor: "#9F77EB",
-              color: "white", 
+              color: "white",
             },
-                
-        }}
+
+          }}
         >
-        {name}
-    
-       
-      </Button>
-        </ThemeProvider>
+          {name}
+
+
+        </Button>
+      
+      </ThemeProvider>
     </>
   );
 };

@@ -20,36 +20,37 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
     <Box
       sx={{
         flexGrow: 1,
+        maxHeight: "auto",
         border: "1px solid rgba(0, 0, 0, 0.20)",
-        borderRadius:"5px",
-        //paddingTop:"19px",
-        paddingBottom:"51px",
-        paddingLeft:"20px",
-        marginRight:"38px",
-        marginLeft:"39px",
-        paddingTop:"33px",
+        borderRadius: "5px",
+        paddingBottom: "59px",
+        paddingLeft: "23px",
+        paddingRight:"58px",
+        marginRight: "19px",
+        marginLeft: "22px",
+        paddingTop: "10px",
         overflow: "auto",
-        maxHeight:"auto",   
+        maxHeight: "auto",
       }}
-      pl={2}
-      pr={3}
+      
+      // pl={2}
+      // pr={3}
     >
       <Typography
         component="p"
-        color="#868686" 
-        sx={{ ml: 1, mt: 2, paddingBottom:"9px",
-        fontSize: "small" }}
+        color="#868686"
+        sx={{ ml: 1, mt: 2, paddingBottom: "9px", fontSize: "small" }}
       >
         Accounts Payable
       </Typography>
 
       <Grid
         container
-        spacing= {{ xs: 2, md: 2 }}
-        columns={{ xs:4, sm: 8, md:12 }}
+        spacing={{ xs: 2, md: 2, lg: 2, xl: 2 }}
+        columns={{ xs: 1, sm: 8, md: 12 }}
         mb={3}
       >
-        <Grid   xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -57,7 +58,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button1"
           />
         </Grid>
-        <Grid   xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -65,7 +66,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button2"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -73,7 +74,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button3"
           />
         </Grid>
-        <Grid   xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -84,18 +85,18 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
       </Grid>
       <Typography
         component="p"
-        color="#868686" 
-        sx={{ ml: 1, mt: 2,paddingBottom:"9px",fontSize: "small" }}
+        color="#868686"
+        sx={{ ml: 1, mt: 2, paddingBottom: "9px", fontSize: "small" }}
       >
         Recruitment
       </Typography>
       <Grid
         container
-        spacing={{ xs: 2, md: 2 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+        spacing={{ xs: 2, md: 2, lg: 2, xl: 2 }}
+        columns={{ xs: 1, sm: 8, md: 12 }}
         mb={3}
       >
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -103,7 +104,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button5"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -111,7 +112,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button6"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -119,7 +120,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button7"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -130,17 +131,17 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
       </Grid>
       <Typography
         component="p"
-        color="#868686" 
-        sx={{ ml: 1, mt: 2, paddingBottom:"9px",fontSize: "small" }}
+        color="#868686"
+        sx={{ ml: 1, mt: 2, paddingBottom: "9px", fontSize: "small" }}
       >
         Employee Identification
       </Typography>
       <Grid
         container
-        spacing={{ xs: 2, md: 2 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
+        spacing={{ xs: 2, md: 2, lg: 2, xl: 2 }}
+        columns={{ xs: 1, sm: 8, md: 12 }}
       >
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -148,7 +149,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button9"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -156,7 +157,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button10"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
@@ -164,7 +165,7 @@ export default function ResponsiveGrid({ isActive, handleClose }) {
             buttonId="button11"
           />
         </Grid>
-        <Grid xs={12} sm={4} md={3}>
+        <Grid xs={2} sm={4} md={3}>
           <ButtonComponent
             isActive={isActive}
             handleClose={handleClose}
